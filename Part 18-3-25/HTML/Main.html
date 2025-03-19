@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+    <title>Responsive Navbar</title>
+</head>
+
+<style>
+    .bg-custom {
+        background-color: #006d66;
+        color: aliceblue;
+    }
+
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar-toggler-icon {
+        background-color: rgba(255, 255, 255, 0.9);
+        -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") no-repeat center;
+        mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") no-repeat center;
+    }
+
+
+    .navbar {
+        background-color: #006d66;
+        /* Dark background */
+        color: white;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: white;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: #ddd;
+    }
+
+    .navbar-dark .navbar-nav .nav-item.active .nav-link {
+        background-color: #dc3545;
+        /* Red for active */
+        color: white;
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+        background-color: white;
+    }
+
+    .dropdown-menu {
+        background-color: #012321;
+    }
+
+    .dropdown-item {
+        color: white;
+    }
+
+    .dropdown-item:hover {
+        background-color: #555;
+        color: white;
+    }
+</style>
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Brand Name</a>
+
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Centered Search Form -->
+                <form class="d-flex mx-auto" style="max-width: 500px; width: 100%;">
+                    <input class="form-control m-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-light m-2">Search</button>
+                </form>
+
+                <!-- Buttons on Right -->
+                <div class="d-flex justify-content-center align-items-center">
+
+                    <div class="dropdown" style="border-radius: 30px !important;">
+                        <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Profile
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle me-2"></i>Profile
+                                    Setting</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-seam me-2"></i>Orders</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle me-2"></i>Help
+                                    Centre</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-infobulb me-2"></i>What's New</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-translate me-2"></i>Languages</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i
+                                        class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+                        </ul>
+                    </div>
+                    <a href="HTML/login_page.html" class="btn btn-outline-light m-2">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBrakes" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Engine Parts <i class="bi bi-gear" style="font-size: 1rem; color: #f4f7f6;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownBrakes">
+                            <a class="dropdown-item" href="#">Brake Pads</a>
+                            <a class="dropdown-item" href="#">Rotors</a>
+                            <a class="dropdown-item" href="#">Shocks & Struts</a>
+                            <a class="dropdown-item" href="#">Springs</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBody" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Body Parts <i class="bi bi-car-front" style="font-size: 1rem; color: #feffff;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownBody">
+                            <a class="dropdown-item" href="#">Bumpers</a>
+                            <a class="dropdown-item" href="#">Fenders</a>
+                            <a class="dropdown-item" href="#">Side Mirrors</a>
+                            <a class="dropdown-item" href="#">Door Handles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLights" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Electrical Parts <i class="bi bi-lightbulb" style="font-size: 1rem; color: #f5fffe;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownLights">
+                            <a class="dropdown-item" href="#">Headlights</a>
+                            <a class="dropdown-item" href="#">Tail Lights</a>
+                            <a class="dropdown-item" href="#">Fog Lights</a>
+                            <a class="dropdown-item" href="#">Turn Signals</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEngine" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Accessories <i class="bi bi-tools" style="font-size: 1rem; color: #f9ffff;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownEngine">
+                            <a class="dropdown-item" href="#">Engine Parts</a>
+                            <a class="dropdown-item" href="#">Transmission</a>
+                            <a class="dropdown-item" href="#">Clutch</a>
+                            <a class="dropdown-item" href="#">Axles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownElectrical" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dashboard Parts <i class="bi bi-speedometer2" style="font-size: 1rem; color: #fcffff;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownElectrical">
+                            <a class="dropdown-item" href="#">Batteries</a>
+                            <a class="dropdown-item" href="#">Alternators</a>
+                            <a class="dropdown-item" href="#">Starters</a>
+                            <a class="dropdown-item" href="#">Wiring</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownElectrical" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Transmission Parts <i class="bi bi-gear-wide-connected"
+                                style="font-size: 1rem; color: #ffffff;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownElectrical">
+                            <a class="dropdown-item" href="#">Batteries</a>
+                            <a class="dropdown-item" href="#">Alternators</a>
+                            <a class="dropdown-item" href="#">Starters</a>
+                            <a class="dropdown-item" href="#">Wiring</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccessories" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Batteries <i class="bi bi-battery-half" style="font-size: 1rem; color: #f3fffe;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownAccessories">
+                            <a class="dropdown-item" href="#">Floor Mats</a>
+                            <a class="dropdown-item" href="#">Seat Covers</a>
+                            <a class="dropdown-item" href="#">Steering Wheels</a>
+                            <a class="dropdown-item" href="#">Audio Systems</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccessories" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cooling System <i class="bi bi-fan" style="font-size: 1rem; color: #ffffff;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownAccessories">
+                            <a class="dropdown-item" href="#">Floor Mats</a>
+                            <a class="dropdown-item" href="#">Seat Covers</a>
+                            <a class="dropdown-item" href="#">Steering Wheels</a>
+                            <a class="dropdown-item" href="#">Audio Systems</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccessories" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Fuel System <i class="bi bi-fuel-pump-fill" style="font-size: 1rem; color: #ecf4f3;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownAccessories">
+                            <a class="dropdown-item" href="#">Floor Mats</a>
+                            <a class="dropdown-item" href="#">Seat Covers</a>
+                            <a class="dropdown-item" href="#">Steering Wheels</a>
+                            <a class="dropdown-item" href="#">Audio Systems</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccessories" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Brake System <i class="bi bi-exclamation-octagon-fill"
+                                style="font-size: 1rem; color: #eef1f1;"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownAccessories">
+                            <a class="dropdown-item" href="#">Floor Mats</a>
+                            <a class="dropdown-item" href="#">Seat Covers</a>
+                            <a class="dropdown-item" href="#">Steering Wheels</a>
+                            <a class="dropdown-item" href="#">Audio Systems</a>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+    </nav>
+
+    </div>
+    <main>
+
+
+        <div style="text-align: center;">
+            <h2 style="font-weight: bold;">FIND PART BY VEHICLE</h2>
+
+            <div style="display: inline-block; margin: 20px 0;">
+                <select style="padding: 5px; margin: 5px;"><option value="">Car</option><option value="">Ford</option></select>
+    
+                <select style="padding: 5px; margin: 5px;"><option value="">Model</option><option value="">Figo</option></select>
+               
+                <select style="padding: 5px; margin: 5px;"><option value="">Year</option><option value="">2024</option></select>
+         
+                <select style="padding: 5px; margin: 5px;"><option value="">-Parts</option><option value="">-Brakes</option></select>
+                <input type="text" placeholder="Name of Product (optional)" style="padding: 5px; margin: 5px;">
+                
+                <button style="padding: 5px 20px; background-color: #dc3545; color: white; border: none; margin: 5px;">Go</button>
+            </div>
+        </div>
+
+        <div class="container" style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+            
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="HTML/Images/Part1.png" class="card-img-top" alt="Part Image">
+                <div class="card-body">
+                    <h5 class="card-title">Part Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Rs 1,000.00 <i class="bi bi-currency-rupee"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-white py-1" style="background-color: rgba(0, 0, 0, 0.867);">
+        <div class="container">
+            <!-- Social Media Section (Centered) -->
+            <div class="d-flex justify-content-center mb-1">
+                <h5 class="me-2">Follow Us</h5>
+            </div>
+            <div class="d-flex justify-content-center mb-1">
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="text-center">
+                <p class="mb-0">© 2025 Your Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+</body>
+
+</html>
